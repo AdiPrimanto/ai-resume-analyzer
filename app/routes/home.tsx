@@ -40,15 +40,15 @@ export default function Home() {
   }, []);
 
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
-    <Navbar />
+    {/* <Navbar /> */}
 
     <section className="main-section">
       <div className="page-heading py-16">
-        <h1>Track Your Applications & Resume Ratings</h1>
+        <h1>Review CV Anda</h1>
         {!loadingResumes && resumes?.length === 0 ? (
-            <h2>No resumes found. Upload your first resume to get feedback.</h2>
+            <h2>Belum ada CV yang ditemukan. Unggah CV pertamamu untuk mendapatkan feedback.</h2>
         ): (
-          <h2>Review your submissions and check AI-powered feedback.</h2>
+          <h2>Review CV Anda dan periksa feedback AI.</h2>
         )}
       </div>
       {loadingResumes && (
@@ -68,7 +68,7 @@ export default function Home() {
       {!loadingResumes && resumes?.length === 0 && (
           <div className="flex flex-col items-center justify-center mt-10 gap-4">
             <Link to="/upload" className="primary-button w-fit text-xl font-semibold">
-              Upload Resume
+              Upload CV
             </Link>
           </div>
       )}
